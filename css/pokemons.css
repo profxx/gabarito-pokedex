@@ -25,9 +25,11 @@
 .pokemon .name{
     padding: 0;
     margin: 0;
+    text-transform: capitalize;
 }
 .pokemon .detail{
     display: flex;
+    justify-content: space-between;
 }
 .pokemon .type{
     font-size: 10px;

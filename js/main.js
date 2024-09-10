@@ -23,12 +23,8 @@ const pokemonList = document.getElementById("pokemonList");
 fetch(url)
     .then((response) => response.json())
     .then((listaPokemons) => listaPokemons.results)
-    .then((list) => {
-        for (let i = 0; i < list.length; i++){
-            const pokemon = convertPokemonToLi(list[i]);
-            pokemonList.innerHTML += pokemon;
-        }
-    })
+    .then((list) => pokemonList.innerHTML = 
+        list.map(convertPokemonToLi).join(""))
     .catch((error) => console.log(error));
 
 
